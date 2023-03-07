@@ -12,7 +12,7 @@ class ManagerObserver
         /** @var IsManagerInterface $creatingUser */
         $creatingUser = request()->user();
         if ($creatingUser) {
-            $creatingManager = $creatingUser->manager()->get();
+            $creatingManager = $creatingUser->manager()->first();
             if ($creatingManager) {
                 $manager->createdBy()->associate($creatingManager);
             }

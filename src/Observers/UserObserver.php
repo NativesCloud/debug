@@ -30,6 +30,9 @@ class UserObserver
 
     public function deleted(IsManagerInterface $user): void
     {
-        $this->managerRepository->delete($user->getManager()->id);
+        $manager = $user->getManager();
+        if (!is_null($manager)) {
+            $this->managerRepository->delete($manager->id);
+        }
     }
 }

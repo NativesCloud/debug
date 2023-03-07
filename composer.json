@@ -1,5 +1,5 @@
 {
-    "name": "vng/eva-core",
+    "name": "natives/natives-core",
     "description": "Kern voor beheerapplicaties van instrumentengids Eva",
     "type": "library",
     "authors": [
